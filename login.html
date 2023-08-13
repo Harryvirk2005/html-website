@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Form</h2>
+        <form id="loginForm">
+            <label for="email">ENTER EMAIL:</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="password">ENTER PASSWORD:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="button" onclick="validateLogin()">Login</button>
+        </form>
+    </div>
+    
+    <script>
+        function validateLogin() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            
+            if (email === "lol@gmail.com" && password === "bajwalol") {
+                // Redirect to the welcome page
+                window.location.href = "welcome.html";
+            } else if (email === "lol@gmail.com") {
+                alert("WRONG PASSWORD");
+            } else {
+                alert("WRONG EMAIL");
+            }
+        }
+    </script>
+</body>
+</html>
